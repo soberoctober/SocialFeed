@@ -2,8 +2,11 @@ package com.eltex;
 
 public class Main {
     public static void main(String[] args) {
-        final var service = new WallService();
-        service.like();
-        System.out.println(service.getPost()); // Post[content=, author=Anonymous, likes=1]
+        UserService userService = new UserService();
+        User user = new User(0, "mscott", "Michael Scott", "userPic");
+        userService.save(user);
+
+        System.out.println(user.getId());  // Post[content=, author=Anonymous, likes=1]
     }
 }
+
