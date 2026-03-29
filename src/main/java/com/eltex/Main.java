@@ -6,7 +6,8 @@ public class Main {
         User user = new User(0, "mscott", "Michael Scott", "userPic");
         userService.save(user);
 
-        System.out.println(user.getId());  // Post[content=, author=Anonymous, likes=1]
+        System.out.println(userService.getById(10));
+        //System.out.println(user.getId());
     }
 }
 
